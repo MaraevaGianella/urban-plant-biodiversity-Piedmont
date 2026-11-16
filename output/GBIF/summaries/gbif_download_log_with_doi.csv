@@ -1,0 +1,13 @@
+NAME,LEVEL,AREA_ID,n_occurrences,doi,doi_url,license,access_date
+Alessandria,CORE_CITY,Alessandria_CORE_CITY,989,10.15468/dl.xqxuw5,https://doi.org/10.15468/dl.xqxuw5,http://creativecommons.org/licenses/by-nc/4.0/legalcode,2026-03-10
+Alessandria,FUA,Alessandria_FUA,4147,10.15468/dl.kqmrur,https://doi.org/10.15468/dl.kqmrur,http://creativecommons.org/licenses/by-nc/4.0/legalcode,2026-03-10
+Asti,CORE_CITY,Asti_CORE_CITY,5996,10.15468/dl.ku7ur4,https://doi.org/10.15468/dl.ku7ur4,http://creativecommons.org/licenses/by-nc/4.0/legalcode,2026-03-10
+Asti,FUA,Asti_FUA,14804,10.15468/dl.spkq4f,https://doi.org/10.15468/dl.spkq4f,http://creativecommons.org/licenses/by-nc/4.0/legalcode,2026-03-10
+Biella,LAU_ONLY,Biella_LAU_ONLY,1424,10.15468/dl.k8uwhj,https://doi.org/10.15468/dl.k8uwhj,http://creativecommons.org/licenses/by-nc/4.0/legalcode,2026-03-10
+Cuneo,LAU_ONLY,Cuneo_LAU_ONLY,1292,10.15468/dl.2rd9mk,https://doi.org/10.15468/dl.2rd9mk,http://creativecommons.org/licenses/by-nc/4.0/legalcode,2026-03-10
+Novara,CORE_CITY,Novara_CORE_CITY,657,10.15468/dl.yuu9wh,https://doi.org/10.15468/dl.yuu9wh,http://creativecommons.org/licenses/by-nc/4.0/legalcode,2026-03-10
+Novara,FUA,Novara_FUA,3217,10.15468/dl.gugjah,https://doi.org/10.15468/dl.gugjah,http://creativecommons.org/licenses/by-nc/4.0/legalcode,2026-03-10
+Torino,CORE_CITY,Torino_CORE_CITY,8149,10.15468/dl.3nnffn,https://doi.org/10.15468/dl.3nnffn,http://creativecommons.org/licenses/by-nc/4.0/legalcode,2026-03-10
+Torino,FUA,Torino_FUA,37652,10.15468/dl.9fgcc9,https://doi.org/10.15468/dl.9fgcc9,http://creativecommons.org/licenses/by-nc/4.0/legalcode,2026-03-10
+Verbania,LAU_ONLY,Verbania_LAU_ONLY,,10.15468/dl.g26kc5,https://doi.org/10.15468/dl.g26kc5,http://creativecommons.org/licenses/by-nc/4.0/legalcode,2026-03-10
+Vercelli,LAU_ONLY,Vercelli_LAU_ONLY,456,10.15468/dl.2xdrpu,https://doi.org/10.15468/dl.2xdrpu,http://creativecommons.org/licenses/by-nc/4.0/legalcode,2026-03-10
