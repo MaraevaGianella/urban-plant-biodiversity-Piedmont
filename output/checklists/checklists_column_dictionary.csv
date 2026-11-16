@@ -1,0 +1,77 @@
+Section,Column,Description,Source/calculation
+Area,area_scale_sheet,Study area and spatial unit of the row (city_LAU = municipality; city_FUA = functional urban area). Present in all_areas only; in the per-area sheets it is the sheet name,06
+Taxonomic identity,wcvp_final_id,WCVP identifier of the accepted taxon; primary key used for every join in the pipeline,"checklist_finale (Part B), corrected in 06 for non-Accepted ids (Illegitimate/Invalid) remapped to the true Accepted id"
+Taxonomic identity,wcvp_final_name,"Accepted scientific name according to WCVP, without author",checklist_finale (Part B)
+Taxonomic identity,wcvp_final_authors,Author(s) of the WCVP accepted name,checklist_finale (Part B)
+Taxonomic identity,wcvp_final_rank,"Taxonomic rank according to WCVP (Species, Subspecies, Variety...)",checklist_finale (Part B)
+Taxonomic identity,wcvp_final_ipni_id,IPNI identifier linked to the WCVP accepted name,checklist_finale (Part B)
+Taxonomic identity,wfo_final_id,World Flora Online identifier of the accepted taxon,checklist_finale (Part B)
+Taxonomic identity,wfo_final_name,Accepted scientific name according to WFO,checklist_finale (Part B)
+Taxonomic identity,wfo_final_authors,Author(s) of the WFO accepted name,checklist_finale (Part B)
+Taxonomic identity,wfo_final_rank,Taxonomic rank according to WFO,checklist_finale (Part B)
+Taxonomic identity,original_names_by_source,"All raw original names used for this taxon in this area, each followed by its source dataset in parentheses","06, aggregated per (area, taxon)"
+Taxonomic identity,final_reconciled_name,Final name after taxonomic reconciliation and manual corrections,"04, from origin_status_full.csv"
+Taxonomic identity,taxo_genus,"Genus (from the GBIF backbone, manually checked and corrected)","GBIF backbone (06), manually checked and corrected"
+Cultivation status,local_status,Wild/cultivated status based ONLY on evidence collected for THIS area: confirmed_wild / likely_cultivated / uncertain_weak_gbif,"06, source-reliability hierarchy for that area"
+Cultivation status,global_cultivation_status,"GLOBAL wild/cultivated status (area-independent), weighted-evidence score; 6 categories: confirmed_wild, likely_cultivated, uncertain_no_evidence, uncertain_weak_evidence, uncertain_conflicting_evidence, exclude_recorded_by_mistake",05_Cultivation_flagging.R
+Cultivation status,local_global_conflict,1 if local and global status contradict each other,06
+Cultivation status,local_evidence_despite_mistake,"1 if Bartolucci/Galasso flags the taxon as ""recorded by mistake"" nationally, but there's real local evidence of presence",06
+Cultivation status,needs_area_review,1 if the row needs manual review (logical OR of all review flags),06
+EASIN (informational),in_easin_alien_list,1 if the taxon appears in the EASIN catalogue; does NOT imply alien in Piedmont,"occ_IT_Plantae_all_clean.csv, joined in 06"
+EASIN (informational),easin_taxon_confirmed_alien,1 if the taxon is already confirmed alien from another source (origin_piedmont or WCVP),06
+Origin and status,origin_piedmont,"Origin in Piedmont from Bartolucci/Galasso: native, native_doubtful, native_no_longer_recorded, native_extinct_or_possibly_extinct, alien_naturalized, alien_invasive, alien_casual, alien_doubtful, alien_no_longer_recorded, alien_extinct_or_possibly_extinct, alien_data_deficient, alien_unspecified_substatus, recorded_by_mistake, native_and_cultivated_crop. Rows with 'recorded_by_mistake' (69 rows, 37 taxa) are taxa reported in error by Bartolucci/Galasso; they are kept in the checklist for transparency (no taxon was excluded) and should not be counted as confirmed presences","04, regional PIE code"
+Origin and status,origin_italy,"NATIONAL-level origin: native/alien, from which sheet gave the direct match",04
+Origin and status,alien_substatus_piedmont,Alien substatus (CAS/NAT/INV) for native-side rows with an alien component in the PIE code (Bartolucci side),04
+Origin and status,status_piedmont,"Alien substatus (CAS/NAT/INV) for Piedmont, Galasso side; mutually exclusive with alien_substatus_piedmont",04
+Origin and status,status_italy,"National alien status (CAS/NAT/INV) or ""native""",04
+Origin and status,endemic_italy,"1 if endemic to Italy (Bartolucci's ""E"" column); NA = not present in Bartolucci_native, not a ""no""",04/05
+Origin and status,cultivated,1 if Bartolucci/Galasso flags CLT/CLT?,"04, CLT/FER column"
+Origin and status,feral_flag,"1 if flagged FER (feral, escaped from cultivation)","04, CLT/FER column"
+Origin and status,is_ias,1 if an EU-listed Invasive Alien Species (Reg. EU 1143/2014),"04, IAS column"
+Origin and status,introduction_period,"archaeophyte (before 1492) or neophyte (after), alien taxa only","04, ESO column"
+Origin and status,wcvp_in_italy,1 if WCVP records a known distribution in Italy,"04, wcvp_distribution_2606.csv"
+Origin and status,wcvp_introduced_in_italy,1 if WCVP classifies the taxon as introduced in Italy,"04, wcvp_distribution_2606.csv"
+Origin and status,wcvp_distribution_conflict,1 if WCVP's Italian distribution doesn't confirm origin_piedmont,04
+Geographic distribution,distribution_category,"Northern/Central/Southern/Insular or combinations, or ""Widespread"" (all 4 ISTAT macro-areas)",04
+Geographic distribution,regions_present,List of Italian region codes where present per Bartolucci/Galasso,04
+Geographic distribution,distribution_disjunct,1 if present in North AND South/Insular but NOT Central (discontinuous pattern),04
+Higher taxonomy,taxo_kingdom,Kingdom (Plantae for vascular taxa),Direct GBIF or backbone (06)
+Higher taxonomy,taxo_phylum,Phylum; used for the non-vascular filter; this file was manually checked and corrected,Direct GBIF or backbone (06)
+Higher taxonomy,taxo_class,Botanical class,same as taxo_phylum
+Higher taxonomy,taxo_order,Botanical order,same as taxo_phylum
+Higher taxonomy,taxo_family,Botanical family,same as taxo_phylum
+Life form,lifeform_from_wcvp,"Life form per WCVP's description (e.g. ""tree"", ""perennial"")",checklist_finale (Part B)
+Life form,lifeform_drevojan_summary,"Life-form categories per Drevojan et al. 2023 (Raunkiaer system: Phanerophyte, Hemicryptophyte, Geophyte...), summarized into one string","checklist_finale (Part B), summarized in 06"
+Sources,sources_list,Datasets confirming presence in this area (EASIN deliberately excluded),06
+Sources,n_sources,Number of distinct datasets confirming presence,06
+Sources,n_records_total,Total raw records (including EASIN) contributing to this area-taxon combination,06
+Sources,in_bbpao,1/0 flag: presence in this area according to the BBPAO records,06
+Sources,in_urbica_censite,"1/0 flag: presence according to Flora Urbica Torino 1993, censused taxa (Torino only)",06
+Sources,in_urbica_ornamentali,"1/0 flag: presence according to Flora Urbica Torino 1993, ornamental taxa (Torino only)",06
+Sources,in_rami,1/0 flag: presence according to the RAMI monumental trees inventory,06
+Sources,in_alberate_torino,1/0 flag: presence according to the Torino street-tree inventory,06
+Sources,in_alberate_alessandria,1/0 flag: presence according to the Alessandria street-tree inventory,06
+Sources,in_gbif,1/0 flag: presence according to GBIF occurrences,06
+Sources,n_records_bbpao,Number of raw BBPAO records for this area-taxon,06
+Sources,n_records_rami,Number of raw RAMI records for this area-taxon,06
+Sources,n_records_gbif,Number of raw GBIF records for this area-taxon,06
+Years and references,bbpao_years,"Publication year(s) of BBPAO references (publication year of the cited work, not necessarily the exact observation year)","06, joined with the References sheet"
+Years and references,bbpao_references,"BBPAO reference code(s) (e.g. R1, R35)","06, ref_id column"
+Years and references,urbica_survey_year,1993 by construction (single historical survey),"06, constant"
+Years and references,gbif_year_min,Oldest year among GBIF occurrences of the taxon (global calculation),03_GBIF_flagging
+Years and references,gbif_year_max,Most recent year among GBIF occurrences of the taxon (global calculation),03_GBIF_flagging
+Years and references,gbif_years_since_last_occ,Years since the last known GBIF occurrence,03_GBIF_flagging
+Years and references,gbif_basis_of_record,"Darwin Core record type(s) (HUMAN_OBSERVATION, PRESERVED_SPECIMEN, MATERIAL_CITATION...)","06, basisOfRecord column"
+Years and references,first_record_year,Oldest year across ALL sources (not just GBIF) for this area-taxon,06
+Years and references,last_record_year,Most recent year across ALL sources (not just GBIF) for this area-taxon,06
+GBIF quality flags,gbif_flag_low_occ,1 if few total GBIF occurrences,03_GBIF_flagging
+GBIF quality flags,gbif_flag_stale,1 if the last occurrence is old,03_GBIF_flagging
+GBIF quality flags,gbif_flag_obs_only,1 if mostly/only citizen-science observations,03_GBIF_flagging
+GBIF quality flags,gbif_flag_gbif_only,1 if GBIF is the ONLY source for this taxon across the whole checklist,03_GBIF_flagging
+GBIF quality flags,gbif_flag_any,1 if at least one of the 4 GBIF flags above is active,06
+GBIF quality flags,gbif_flag_reasons,"Text list of active flags (e.g. ""low_occ; obs_only"")",06
+Global review (Bartolucci/Galasso),global_needs_review,"1 for a global reason: parenthetical PIE code, Cryptogenic, agricultural crops, no match, WCVP conflict",04
+Global review (Bartolucci/Galasso),global_review_reason,Text explaining the specific reason,04
+Origin and status,source_side,Which sheet gave the direct match in Bartolucci/Galasso: native / alien / no_match,04
+Expert review,expert_review,"Expert opinion on the plausibility of the record in this area: certain / probable / possible / unlikely / very_unlikely / probable_misidentification. Empty = not reviewed (or verdict to be confirmed, see note)","Manual review by a co-author with expert knowledge of the local flora, Oct 2026; only the doubtful taxa of Cuneo and Asti were reviewed"
+Expert review,expert_review_note,Free-text comment accompanying the expert opinion (e.g. cultivated but not flagged as such),"Manual review by a co-author with expert knowledge of the local flora, Oct 2026"
