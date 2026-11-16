@@ -1,0 +1,50 @@
+cff-version: 1.2.0
+message: "If you use this software or dataset, please cite it as below."
+title: "Desk-based assessment of urban vascular plant biodiversity in Piedmont, Italy"
+abstract: >-
+  Checklists and occurrence data of the urban vascular flora of the eight
+  provincial capitals of Piedmont (Alessandria, Asti, Biella, Cuneo, Novara,
+  Torino, Verbania, Vercelli), with reproducible R workflows and GBIF download
+  provenance.
+authors:
+  - family-names: Gianella
+    given-names: Maraeva
+    orcid: "https://orcid.org/0000-0003-1814-6166"
+  - family-names: Ulian
+    given-names: Tiziana
+    orcid: "https://orcid.org/0000-0001-8298-256X"
+  - family-names: Adamo
+    given-names: Martino
+    orcid: "https://orcid.org/0000-0001-7571-3505"
+  - family-names: Barni
+    given-names: Elena
+    orcid: "https://orcid.org/0000-0001-7256-0064"
+  - family-names: Fenoglio
+    given-names: Alessandra
+    orcid: "https://orcid.org/0000-0002-5655-2889"
+  - family-names: Mucciarelli
+    given-names: Marco
+    orcid: "https://orcid.org/0000-0001-8256-7980"
+  - family-names: Pastore
+    given-names: Maria Chiara
+    orcid: "https://orcid.org/0000-0002-9577-0133"
+  - family-names: Sebesta
+    given-names: Nicole
+    orcid: "https://orcid.org/0000-0002-0976-3560"
+  - family-names: Siniscalco
+    given-names: Maria Consolata
+    orcid: "https://orcid.org/0000-0002-8848-4980"
+
+version: v1.0.0
+date-released: "2026-11-16"
+license: CC-BY-4.0
+keywords:
+  - urban flora
+  - vascular plants
+  - checklist
+  - Piedmont
+  - Italy
+  - GBIF
+  - biodiversity
+repository-code: "https://github.com/MaraevaGianella/urban-plant-biodiversity-Piedmont"
+doi: "10.5281/zenodo.XXXXXXX"
