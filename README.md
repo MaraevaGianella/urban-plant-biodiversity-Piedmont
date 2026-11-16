@@ -1,4 +1,4 @@
-# Urban vascular flora of the eight provincial capitals of Piedmont — code and data
+# Desk-based assessment of urban vascular plant biodiversity in Piedmont, Italy — code and data
 
 Code and checklist workbook.
 
