@@ -37,3 +37,65 @@ Scripts 01–06 need the third-party inputs and a manual review step. To reprodu
 - Code (`R/`, `setup_renv.R`): MIT, see `LICENSE`.
 - Checklists and manual-review files produced by the authors: CC BY 4.0, see `LICENSE_DATA.md`.
 - Third-party inputs keep their original licences (`Input/README_input.md`). Licences of individual GBIF records are documented on the DOI pages of the downloads listed in `output/GBIF/summaries/gbif_download_log_with_doi.csv`.
+
+## R packages and citations
+
+The analyses were run in R 4.5.1 (R Core Team 2025). Package versions are
+pinned in `renv.lock`. The packages used in the pipeline are listed below,
+grouped by step, with the citation to be used for each.
+
+### Data retrieval, spatial processing and cleaning
+- **rgbif** — Chamberlain S, Oldoni D, Barve V, Desmet P, Geffert L, Ram K
+  (2026). rgbif: Interface to the Global Biodiversity Information Facility API.
+- **CoordinateCleaner** — Zizka A, Silvestro D, Andermann T, et al. (2019).
+  CoordinateCleaner: Standardized cleaning of occurrence records from
+  biological collection databases. Methods in Ecology and Evolution 10(5):
+  744–751. https://doi.org/10.1111/2041-210X.13152
+- **giscoR** — Hernangómez D (2026). giscoR: Download 'Eurostat' 'GISCO'
+  Spatial Data. https://doi.org/10.5281/zenodo.24116752
+- **sf** — Pebesma E (2018). Simple features for R: Standardized support for
+  spatial vector data. The R Journal 10(1): 439–446.
+  https://doi.org/10.32614/RJ-2018-009
+
+### Taxonomic reconciliation and life forms
+- **rWCVP** — Brown M, Walker B (2023). rWCVP: Working with Data from the
+  World Checklist of Vascular Plants.
+  https://doi.org/10.32614/CRAN.package.rWCVP
+- **WorldFlora** — Kindt R (2020). WorldFlora: An R package for exact and
+  fuzzy matching of plant names against the World Flora Online taxonomic
+  backbone data. Applications in Plant Sciences 8(9): e11388.
+  https://doi.org/10.1002/aps3.11388
+
+### Data manipulation
+- **data.table** — Dowle M, Srinivasan A (2016). data.table: Extension of
+  data.frame. https://CRAN.R-project.org/package=data.table
+- **dplyr** — Wickham H, François R, Henry L, Müller K, Vaughan D (2025).
+  dplyr: A Grammar of Data Manipulation.
+  https://CRAN.R-project.org/package=dplyr
+- **lubridate** — Grolemund G, Wickham H (2011). Dates and times made easy
+  with lubridate. Journal of Statistical Software 40(3): 1–25.
+  https://doi.org/10.18637/jss.v040.i03
+- **purrr** — Wickham H, Henry L (2015). purrr: Functional Programming Tools.
+  https://CRAN.R-project.org/package=purrr
+- **readr** — Wickham H, Hester J, Bryan J (2015). readr: Read Rectangular
+  Text Data. https://CRAN.R-project.org/package=readr
+- **readxl** — Wickham H, Bryan J (2015). readxl: Read Excel Files.
+  https://CRAN.R-project.org/package=readxl
+- **stringr** — Wickham H (2018). stringr: Simple, Consistent Wrappers for
+  Common String Operations. https://CRAN.R-project.org/package=stringr
+- **tibble** — Müller K, Wickham H (2023). tibble: Simple Data Frames.
+  https://CRAN.R-project.org/package=tibble
+- **tidyr** — Wickham H, Vaughan D, Girlich M (2023). tidyr: Tidy Messy Data.
+  https://CRAN.R-project.org/package=tidyr
+
+### Output and visualisation
+- **ggplot2** — Wickham H (2011). ggplot2. Wiley Interdisciplinary Reviews:
+  Computational Statistics 3(2): 180–185. https://doi.org/10.1002/wics.147
+- **ggpubr** — Kassambara A (2016). ggpubr: 'ggplot2' Based Publication Ready
+  Plots. https://CRAN.R-project.org/package=ggpubr
+- **plotly** — Sievert C (2020). Interactive Web-Based Data Visualization with
+  R, plotly, and shiny. Chapman and Hall/CRC. https://plotly-r.com
+- **scales** — Wickham H (2016). scales: Scale Functions for Visualization.
+  https://CRAN.R-project.org/package=scales
+- **writexl** — Ooms J, Denney B (2017). writexl: Export Data Frames to Excel
+  'xlsx' Format. https://CRAN.R-project.org/package=writexl
