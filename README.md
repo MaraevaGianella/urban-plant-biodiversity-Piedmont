@@ -13,7 +13,7 @@ Code and checklist workbook.
   7. `07_analyses.R` — tables and figures of the paper (reads `output/checklists/checklists_by_area.xlsx`; downloads the GISCO-Eurostat 2024 FUA and LAU boundaries, so it needs an internet connection)
 - `setup_renv.R`, `renv.lock`, `renv/` — R environment (see Reproducibility)
 - `Input/` — see `Input/README_input.md` (third-party inputs are not redistributed)
-- `output/checklists/checklists_by_area.xlsx` — release checklist workbook (Description, all_areas, 12 area sheets, presence/absence matrix)
+- `checklists_by_area_release.xlsx` — release checklist workbook (Description, all_areas, 12 area sheets, presence/absence matrix)
 - `output/checklists/checklists_all_areas.csv`, `checklists_column_dictionary.csv` — UTF-8 CSV copies of `all_areas` and `Description`
 - `output/GBIF/summaries/gbif_download_log_with_doi.csv` — DOIs of the 12 GBIF downloads 
 
@@ -33,7 +33,7 @@ Scripts 01–06 need the third-party inputs and a manual review step. To reprodu
 - `06_checklist_build.R` writes the release checklist (internal diagnostic columns dropped). The columns `expert_review` and `expert_review_note` and the `Description` sheet are added by hand after the script.
 
 ## Citation / licence
-- Cite as: 10.5281/zenodo.24284592
+- Cite as: 10.5281/zenodo.24284840
 - Code (`R/`, `setup_renv.R`): MIT, see `LICENSE`.
 - Checklists and manual-review files produced by the authors: CC BY 4.0, see `LICENSE_DATA.md`.
 - Third-party inputs keep their original licences (`Input/README_input.md`). Licences of individual GBIF records are documented on the DOI pages of the downloads listed in `output/GBIF/summaries/gbif_download_log_with_doi.csv`.
